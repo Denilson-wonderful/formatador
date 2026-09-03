@@ -1,8 +1,12 @@
 function ajustador(link) {
-    return link
-        .replaceAll(";", "/")
-        .replaceAll(":", "?")
-        .replaceAll("Ç", ":");
+    const mapa = {
+        ";": "/",
+        ":": "?",
+        "Ç": ":"
+    };
+
+    // Procura por ;, : ou Ç e substitui de acordo com o mapa acima
+    return link.replace(/[;:Ç]/g, match => mapa[match]);
 }
 
 function formatar() {
