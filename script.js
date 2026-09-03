@@ -1,12 +1,14 @@
 function ajustador(link) {
-    const mapa = {
-        ";": "/",
-        ":": "?",
-        "Ç": ":"
-    };
-
-    // Procura por ;, : ou Ç e substitui de acordo com o mapa acima
-    return link.replace(/[;:Ç]/g, match => mapa[match]);
+    return link.replace(/[;:Ç]/g, caractere => {
+        switch (caractere) {
+            case ";":
+                return "/";
+            case ":":
+                return "?";
+            case "Ç":
+                return ":";
+        }
+    });
 }
 
 function formatar() {
