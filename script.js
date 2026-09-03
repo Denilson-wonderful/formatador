@@ -7,6 +7,8 @@ function ajustador(link) {
                 return "?";
             case "Ç":
                 return ":";
+            case "}":
+                return "|";
         }
     });
 }
