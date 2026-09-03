@@ -1,8 +1,8 @@
 function ajustador(link) {
     return link
-        .replaceAll("Ç", ":")
         .replaceAll(";", "/")
-        .replaceAll(":", "?");
+        .replaceAll(":", "?")
+        .replaceAll("Ç", ":");
 }
 
 function formatar() {
