@@ -1,5 +1,5 @@
 function ajustador(link) {
-    return link.replace(/[;:Ç]/g, caractere => {
+    return link.replace(/[;:Ç}]/g, caractere => {
         switch (caractere) {
             case ";":
                 return "/";
